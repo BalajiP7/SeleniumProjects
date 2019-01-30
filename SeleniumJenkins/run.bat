@@ -1,0 +1,1 @@
+java -cp C:\Automation\Workspace\SeleniumJenkins\bin;C:\Automation\Workspace\SeleniumJenkins\lib\* org.testng.TestNG testng.xml
