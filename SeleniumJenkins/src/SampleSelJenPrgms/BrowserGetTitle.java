@@ -5,6 +5,8 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -31,6 +33,10 @@ public class BrowserGetTitle {
 		driver.findElement(By.name("password")).sendKeys("Y9F!jk@bpPhJ4s");
 		driver.findElement(By.xpath("/html/body/div[2]/div/div/form/div/div[1]/div[3]/div/input")).click();
 		System.out.println(driver.getTitle());
+		System.out.println("Adding Patient from Rapid Entry");
+		WebDriverWait wait = new WebDriverWait(driver,10);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("WebDriverWait"))).click();
+		
 	}
 
 	@AfterTest
