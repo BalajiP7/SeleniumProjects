@@ -33,14 +33,13 @@ public class BrowserGetTitle {
 		driver.findElement(By.name("password")).sendKeys("Y9F!jk@bpPhJ4s");
 		driver.findElement(By.xpath("/html/body/div[2]/div/div/form/div/div[1]/div[3]/div/input")).click();
 		System.out.println(driver.getTitle());
-		System.out.println("Adding Patient from Rapid Entry");
-		WebDriverWait wait = new WebDriverWait(driver,10);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("WebDriverWait"))).click();
-		
+			
 	}
 
 	@AfterTest
 	public void last() {
-		driver.quit();
+		System.out.println("Adding Patient from Rapid Entry");
+		WebDriverWait wait = new WebDriverWait(driver,10);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("WebDriverWait"))).click();
 	}
 }
