@@ -40,6 +40,6 @@ public class BrowserGetTitle {
 	public void last() {
 		System.out.println("Adding Patient from Rapid Entry");
 		WebDriverWait wait = new WebDriverWait(driver,10);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("WebDriverWait"))).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("mast_add_patient"))).click();
 	}
 }
